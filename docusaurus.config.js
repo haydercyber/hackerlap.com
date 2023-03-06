@@ -11,11 +11,11 @@ const remarkIncludeKustomization = require('./src/remark/include-kustomization')
 const remarkBlueprintsAddon = require('./src/remark/blueprints-addon');
 
 const rootDir = path.dirname(require.resolve('./package.json'));
-const manifestsDir = `${rootDir}/../environment/workspace/modules`;
+//  const manifestsDir = `${rootDir}/../environment/workspace/modules`;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'EKS Workshop',
+  title: 'Hackerlap',
   tagline:
     'Practical exercises to learn about Amazon Elastic Kubernetes Service',
   url: 'https://www.eksworkshop.com',
@@ -44,8 +44,8 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           remarkPlugins: [remarkCodeTerminal],
           beforeDefaultRemarkPlugins: [
-            [remarkIncludeCode, { manifestsDir }],
-            [remarkIncludeKustomization, { manifestsDir }],
+            // [remarkIncludeCode, { manifestsDir }],
+            // [remarkIncludeKustomization, { manifestsDir }],
             //[remarkBlueprintsAddon, {terraformDir: `${rootDir}/../terraform/local`}]
           ],
           editUrl:
